@@ -1,3 +1,12 @@
+<?php
+
+include "../connection/config.php";
+session_start();
+if(!isset($_SESSION['admin_id'])){
+  header('location:/admin/index.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -30,7 +39,7 @@
             <div class="col-12">
                 <div class="table-responsive">
                     <h3 class="my-4">Users</h3>
-                    <a href="" class="nav-link">Logout</a>
+                    <a href="../php/admin/logout.php" class="nav-link">Logout</a>
                     <table class="table table-bordered">
                         <tr>
                             <th>Id</th>
@@ -38,6 +47,27 @@
                             <th>Email</th>
                             <th>Delete</th>
                         </tr>
+                        <tbody>
+                          <?php
+                          $sql="SELECT * FROM users ORDER BY id";
+                          $run_sql=mysqli_query($conn,$sql);
+                          if(mysqli_num_rows($run_sql) > 0){
+                            while($row=mysqli_fetch_assoc($run_sql)){
+                              ?>
+                                <tr>
+                              <th><?php echo $row['id']?></th>
+                            <th><?php echo $row['name']?></th>
+                            <th><?php echo $row['email']?></th>
+                            <th>
+                              <a href='../php/admin/delete.php?id=<?php echo $row['id']?>' class="btn btn-success">Delete</a>
+                            </th>
+                            </tr>
+                              <?php
+                            }
+                          }
+                          
+                          ?>
+                        </tbody>
                     </table>
                 </div>
             </div>

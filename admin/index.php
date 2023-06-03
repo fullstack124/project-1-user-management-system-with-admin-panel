@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(isset($_SESSION['admin_id'])){
+  header('location:/admin/dashboard.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,15 +19,15 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+    <link rel="stylesheet" href="../fonts/icomoon/style.css" />
 
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="../css/owl.carousel.min.css" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
 
     <!-- Style -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
 
     <title>Login #6</title>
   </head>
@@ -52,6 +59,7 @@
                 <input
                   type="submit"
                   value="Log In"
+                  id="admin_login"
                   class="btn btn-block btn-primary"
                 />
 
@@ -62,9 +70,9 @@
       </div>
     </div>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>

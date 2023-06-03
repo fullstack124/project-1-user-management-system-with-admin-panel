@@ -12,16 +12,16 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+    <link rel="stylesheet" href="../fonts/icomoon/style.css" />
 
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="../css/owl.carousel.min.css" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
 
     <!-- Style -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
 
-    <title>Login #6</title>
+    <title>User management system </title>
   </head>
   <body>
